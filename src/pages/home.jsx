@@ -818,7 +818,7 @@ const Home = () => {
                                     </div>
                                 </div>
                             </div>
-                            <div className="mt-8 flex space-x-4">
+                            {/* <div className="mt-8 flex space-x-4">
                                 <a href="#" className="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-blue-600 hover:text-white transition-colors">
                                     <i className="fab fa-linkedin-in text-xl"></i>
                                 </a>
@@ -831,7 +831,7 @@ const Home = () => {
                                 <a href="#" className="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-red-600 hover:text-white transition-colors">
                                     <i className="fab fa-youtube text-xl"></i>
                                 </a>
-                            </div>
+                            </div> */}
                         </div>
                         <div className={`${isDarkMode ? 'bg-gray-800' : 'bg-white'} rounded-xl shadow-sm p-8`}>
                             <form onSubmit={handleSubmit}>
@@ -960,11 +960,11 @@ const Home = () => {
                         <p className="text-gray-400 text-sm mb-4 md:mb-0">
                             Designed and developed with <i className="fas fa-heart text-red-500"></i> by Venkatesulu Pujari
                         </p>
-                        <div className="flex space-x-6">
+                        {/* <div className="flex space-x-6">
                             <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors">Privacy Policy</a>
                             <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors">Terms of Service</a>
                             <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors">Cookies Policy</a>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </footer>
