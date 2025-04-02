@@ -5,20 +5,43 @@ import Home from "./pages/home";
 
 function App() {
   const [loading, setLoading] = useState(true);
+  const [loadingProgress, setLoadingProgress] = useState(0);
 
+  // Simulate actual loading process
   useEffect(() => {
-    setTimeout(() => setLoading(false), 3000);
-  }, []);
+    if (loading) {
+      const interval = setInterval(() => {
+        setLoadingProgress(prev => {
+          const nextProgress = prev + Math.random() * 15;
+          if (nextProgress >= 100) {
+            clearInterval(interval);
+            return 100;
+          }
+          return nextProgress;
+        });
+      }, 150);
+
+      return () => clearInterval(interval);
+    }
+  }, [loading]);
 
   return (
     <Router>
-      {loading ? (
-        <SplashScreen />
-      ) : (
+      <div className="relative h-screen w-full">
+        {loading && (
+          <SplashScreen 
+            progress={loadingProgress}
+            onLoaded={() => setLoading(false)}
+          />
+        )}
+        
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route 
+            path="/" 
+            element={<Home loadingProgress={loadingProgress} />} 
+          />
         </Routes>
-      )}
+      </div>
     </Router>
   );
 }
