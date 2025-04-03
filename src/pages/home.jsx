@@ -152,7 +152,7 @@ const Home = () => {
                 <div className="max-w-7xl mx-auto px-4">
                     <div className="flex justify-between items-center h-16">
                         <div className="flex-shrink-0 flex items-center">
-                            <span className={`text-2xl font-bold ${isDarkMode ? 'text-white' : 'text-gray-800'}`}>Venkatesulu</span>
+                            <span className={`text-2xl font-bold ${isDarkMode ? 'text-white' : 'text-gray-800'}`}>Venkatesulu.dev</span>
                         </div>
                         {/* Desktop Navigation */}
                         <div className="hidden md:flex items-center space-x-8">
@@ -818,20 +818,20 @@ const Home = () => {
                                     </div>
                                 </div>
                             </div>
-                            {/* <div className="mt-8 flex space-x-4">
-                                <a href="#" className="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-blue-600 hover:text-white transition-colors">
+                            <div className="mt-8 flex space-x-4">
+                                <p className="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-blue-600 hover:text-white transition-colors">
                                     <i className="fab fa-linkedin-in text-xl"></i>
-                                </a>
-                                <a href="#" className="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-gray-800 hover:text-white transition-colors">
+                                </p>
+                                <p className="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-gray-800 hover:text-white transition-colors">
                                     <i className="fab fa-github text-xl"></i>
-                                </a>
-                                <a href="#" className="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-blue-400 hover:text-white transition-colors">
+                                </p>
+                                <p className="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-blue-400 hover:text-white transition-colors">
                                     <i className="fab fa-twitter text-xl"></i>
-                                </a>
-                                <a href="#" className="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-red-600 hover:text-white transition-colors">
+                                </p>
+                                <p className="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-red-600 hover:text-white transition-colors">
                                     <i className="fab fa-youtube text-xl"></i>
-                                </a>
-                            </div> */}
+                                </p>
+                            </div>
                         </div>
                         <div className={`${isDarkMode ? 'bg-gray-800' : 'bg-white'} rounded-xl shadow-sm p-8`}>
                             <form onSubmit={handleSubmit}>
@@ -916,11 +916,11 @@ const Home = () => {
                         <div>
                             <h4 className="text-lg font-medium mb-4">Services</h4>
                             <ul className="space-y-2">
-                                <li><a href="#" className="text-gray-400 hover:text-white transition-colors">React Native Development</a></li>
-                                <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Flutter Development</a></li>
-                                <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Mobile UI/UX</a></li>
-                                <li><a href="#" className="text-gray-400 hover:text-white transition-colors">App Architecture</a></li>
-                                <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Code Review</a></li>
+                                <li><p className="text-gray-400 hover:text-white transition-colors">React Native Development</p></li>
+                                <li><p className="text-gray-400 hover:text-white transition-colors">Flutter Development</p></li>
+                                <li><p className="text-gray-400 hover:text-white transition-colors">Mobile UI/UX</p></li>
+                                <li><p className="text-gray-400 hover:text-white transition-colors">App Architecture</p></li>
+                                <li><p className="text-gray-400 hover:text-white transition-colors">Code Review</p></li>
                             </ul>
                         </div>
                         <div>
@@ -941,18 +941,18 @@ const Home = () => {
                                 </button>
                             </form>
                             <div className="mt-4 flex space-x-3">
-                                <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                                <p className="text-gray-400 hover:text-white transition-colors">
                                     <i className="fab fa-linkedin-in text-lg"></i>
-                                </a>
-                                <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                                </p>
+                                <p className="text-gray-400 hover:text-white transition-colors">
                                     <i className="fab fa-github text-lg"></i>
-                                </a>
-                                <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                                </p>
+                                <p className="text-gray-400 hover:text-white transition-colors">
                                     <i className="fab fa-twitter text-lg"></i>
-                                </a>
-                                <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                                </p>
+                                <p className="text-gray-400 hover:text-white transition-colors">
                                     <i className="fab fa-youtube text-lg"></i>
-                                </a>
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -960,11 +960,11 @@ const Home = () => {
                         <p className="text-gray-400 text-sm mb-4 md:mb-0">
                             Designed and developed with <i className="fas fa-heart text-red-500"></i> by Venkatesulu Pujari
                         </p>
-                        {/* <div className="flex space-x-6">
-                            <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors">Privacy Policy</a>
-                            <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors">Terms of Service</a>
-                            <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors">Cookies Policy</a>
-                        </div> */}
+                        <div className="flex space-x-6">
+                            <p className="text-gray-400 hover:text-white text-sm transition-colors">Privacy Policy</p>
+                            <p className="text-gray-400 hover:text-white text-sm transition-colors">Terms of Service</p>
+                            <p className="text-gray-400 hover:text-white text-sm transition-colors">Cookies Policy</p>
+                        </div>
                     </div>
                 </div>
             </footer>
