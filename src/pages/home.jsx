@@ -297,9 +297,10 @@ const Home = () => {
                                 >
                                     View Projects
                                 </button>
-                                <button className={`px-8 py-3 border ${isDarkMode ? 'border-gray-600 text-gray-300 hover:bg-gray-800' : 'border-gray-300 text-gray-700 hover:bg-gray-50'} font-medium !rounded-button cursor-pointer whitespace-nowrap transition-colors duration-300`}>
+                                <a href='https://drive.google.com/file/d/1p0NqRnc5GGuxUUJ3i78CJGIdO8nhztGH/view?usp=sharing'>  <button className={`px-8 py-3 border ${isDarkMode ? 'border-gray-600 text-gray-300 hover:bg-gray-800' : 'border-gray-300 text-gray-700 hover:bg-gray-50'} font-medium !rounded-button cursor-pointer whitespace-nowrap transition-colors duration-300`}>
                                     Download Resume
                                 </button>
+                                </a>
                             </div>
                         </div>
                     </div>
