@@ -349,7 +349,7 @@ const Home = () => {
                     </div>
                     {/* Experience Section */}
                     <div className="mt-16">
-                        <h3 className={`text-2xl font-bold mb-8 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>Professional Experience</h3>
+                        <h3 className={`text-2xl font-bold mb-8 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>Professional Experience & Education</h3>
                         <div className="relative">
                             <div className="absolute left-4 top-0 bottom-0 w-0.5 bg-blue-500"></div>
                             <div className="space-y-8">
@@ -819,12 +819,13 @@ const Home = () => {
                                 </div>
                             </div>
                             <div className="mt-8 flex space-x-4">
-                                <p className="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-blue-600 hover:text-white transition-colors">
+                                <a href="https://www.linkedin.com/in/venkatesulu-p-9a3251335/" className="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-blue-600 hover:text-white transition-colors">
                                     <i className="fab fa-linkedin-in text-xl"></i>
-                                </p>
-                                <p className="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-gray-800 hover:text-white transition-colors">
+                                </a>
+                                <a href="https://github.com/Appu-Venky" className="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-gray-800 hover:text-white transition-colors">
                                     <i className="fab fa-github text-xl"></i>
-                                </p>
+                                </a>
+
                                 <p className="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-blue-400 hover:text-white transition-colors">
                                     <i className="fab fa-twitter text-xl"></i>
                                 </p>
@@ -941,12 +942,13 @@ const Home = () => {
                                 </button>
                             </form>
                             <div className="mt-4 flex space-x-3">
-                                <p className="text-gray-400 hover:text-white transition-colors">
+                                <a href="https://www.linkedin.com/in/venkatesulu-p-9a3251335/" className="text-gray-400 hover:text-white transition-colors">
                                     <i className="fab fa-linkedin-in text-lg"></i>
-                                </p>
-                                <p className="text-gray-400 hover:text-white transition-colors">
+                                </a>
+
+                                <a href="https://github.com/Appu-Venky" className="text-gray-400 hover:text-white transition-colors">
                                     <i className="fab fa-github text-lg"></i>
-                                </p>
+                                </a>
                                 <p className="text-gray-400 hover:text-white transition-colors">
                                     <i className="fab fa-twitter text-lg"></i>
                                 </p>
