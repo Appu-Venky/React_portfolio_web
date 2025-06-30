@@ -26,18 +26,21 @@ const AboutSection = ({ isDarkMode, profileImage }) => {
               {/* Social Media Icons */}
               <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-3">
                 {[
-                  { icon: 'fab fa-github', bg: 'bg-gray-800', hover: 'hover:bg-gray-900' },
-                  { icon: 'fab fa-linkedin', bg: 'bg-blue-600', hover: 'hover:bg-blue-700' },
+                  { icon: 'fab fa-github', bg: 'bg-gray-800', hover: 'hover:bg-gray-900', link: 'https://github.com/Appu-Venky' },
+                  { icon: 'fab fa-linkedin', bg: 'bg-blue-600', hover: 'hover:bg-blue-700', link: 'https://www.linkedin.com/in/venkatesulu-p-9a3251335/' },
                 ].map((social, index) => (
                   <a
                     key={index}
-                    href="#"
+                    href={social.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className={`w-10 h-10 ${social.bg} ${social.hover} rounded-full flex items-center justify-center text-white shadow-lg transform hover:scale-110 transition-all duration-300 cursor-pointer`}
                   >
                     <i className={social.icon}></i>
                   </a>
                 ))}
               </div>
+
             </div>
           </div>
 
@@ -247,7 +250,7 @@ const AboutSection = ({ isDarkMode, profileImage }) => {
                       <div className="w-8 h-8 rounded-lg bg-green-500/10 flex items-center justify-center mr-2">
                         <i className="fas fa-trophy text-green-500"></i>
                       </div>
-                      Key Achievements 
+                      Key Achievements
                     </h5>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                       <div className={`p-4 rounded-xl ${isDarkMode ? 'bg-gray-600/50' : 'bg-gray-50'} text-center`}>
