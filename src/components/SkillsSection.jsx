@@ -1,10 +1,6 @@
 
 const SkillsSection = ({ isDarkMode, skillsChartRef }) => {
     return (
-
-
-
-
         <section id="skills" className={`py-20 ${isDarkMode ? 'bg-gray-800' : 'bg-gray-50'} transition-colors duration-300`}>
             <div className="max-w-7xl mx-auto px-4">
                 <h2 className={`text-3xl font-bold text-center mb-16 ${isDarkMode ? 'text-white' : 'text-gray-900'} relative`}>
