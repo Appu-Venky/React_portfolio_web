@@ -1,5 +1,5 @@
 
-import heroImg from '../assets/Hero_Background.jpeg';
+import heroImg from '../assets/lightFocusHero.png';
 
 
 const HeroSection = ({ isDarkMode }) => {
@@ -24,21 +24,36 @@ const HeroSection = ({ isDarkMode }) => {
                             Crafting seamless mobile and web experiences with
                             modern frameworks and a passion for clean,
                             user-friendly interfaces.</p>
-                        <div className="flex gap-4">
+                        <div className="flex gap-3">
                             <button
                                 onClick={(e) => {
                                     e.preventDefault();
-                                    document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' });
+                                    document.getElementById('projects')?.scrollIntoView({
+                                        behavior: 'smooth',
+                                    });
                                 }}
-                                className="px-8 py-3 !rounded-button rounded-bl-3xl rounded-tr-3xl bg-blue-600 text-white font-medium !rounded-button hover:bg-blue-700 cursor-pointer whitespace-nowrap transition-colors duration-300"
+                                className="px-4 py-2 text-sm !rounded-button rounded-bl-3xl rounded-tr-3xl bg-blue-600 text-white font-medium hover:bg-blue-700 cursor-pointer whitespace-nowrap transition-colors duration-300"
                             >
                                 View Projects
                             </button>
-                            <a href='https://drive.google.com/file/d/1_Ge03h3Zvg8fFoc1ZU15KhZ_SXeVm9Ga/view'>  <button className={`px-8 py-3 border ${isDarkMode ? 'border-gray-600 text-gray-300 hover:bg-gray-800' : 'border-gray-300 text-gray-700 hover:bg-gray-50'} font-medium !rounded-button rounded-bl-3xl rounded-tr-3xl cursor-pointer whitespace-nowrap transition-colors duration-300`}>
-                                Download Resume
-                            </button>
+
+                            <a
+                                href="https://drive.google.com/file/d/1_Ge03h3Zvg8fFoc1ZU15KhZ_SXeVm9Ga/view"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <button
+                                    className={`border px-4 py-2 text-sm rounded-bl-3xl rounded-tr-3xl font-medium whitespace-nowrap transition-colors duration-300 ${isDarkMode
+                                            ? 'border-white text-gray-300 hover:bg-gray-800'
+                                            : 'border-white text-gray-700 hover:bg-gray-50'
+                                        }`}
+                                >
+                                    Download Resume
+                                </button>
                             </a>
                         </div>
+
+
                     </div>
                 </div>
             </div>
