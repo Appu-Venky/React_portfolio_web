@@ -1,5 +1,33 @@
 
 const AboutSection = ({ isDarkMode, profileImage }) => {
+
+
+  const socialMediaLink = [
+    { icon: 'fab fa-github', bg: 'bg-gray-800', hover: 'hover:bg-gray-900', link: 'https://github.com/Appu-Venky' },
+    { icon: 'fab fa-linkedin', bg: 'bg-blue-600', hover: 'hover:bg-blue-700', link: 'https://www.linkedin.com/in/venkatesulu-p-9a3251335/' },
+  ]
+
+
+  const keyponits = [
+    { icon: 'fas fa-briefcase', label: 'Experience', value: '2+ Years' },
+    { icon: 'fas fa-map-marker-alt', label: 'Location', value: 'Bengaluru, India' },
+    { icon: 'fas fa-graduation-cap', label: 'Degree', value: 'B.Tech. Civil' },
+    { icon: 'fas fa-language', label: 'Languages', value: 'English, Hindi, Telugu' }
+  ]
+
+  const coreTechnologies = [
+    { text: 'React js/Native', color: 'from-blue-500 to-blue-600' },
+    { text: 'Flutter', color: 'from-blue-400 to-cyan-500' },
+    { text: 'JavaScript', color: 'from-yellow-400 to-yellow-500' },
+    { text: 'firebase', color: 'from-blue-600 to-indigo-600' },
+    { text: 'Node.js', color: 'from-green-500 to-green-600' },
+    { text: 'MongoDB / FireStore', color: 'from-green-600 to-teal-600' },
+    { text: 'Redux', color: 'from-purple-500 to-purple-600' },
+    { text: 'Bloc / Getx', color: 'from-green-500 to-green-600' },
+    { text: 'REST APIs', color: 'from-gray-600 to-gray-700' }
+  ]
+
+
   return (
     <section id="about" className={`py-20 ${isDarkMode ? 'bg-gray-800' : 'bg-gray-50'} transition-colors duration-300`}>
       <div className="max-w-7xl mx-auto px-4">
@@ -25,10 +53,7 @@ const AboutSection = ({ isDarkMode, profileImage }) => {
 
               {/* Social Media Icons */}
               <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-3">
-                {[
-                  { icon: 'fab fa-github', bg: 'bg-gray-800', hover: 'hover:bg-gray-900', link: 'https://github.com/Appu-Venky' },
-                  { icon: 'fab fa-linkedin', bg: 'bg-blue-600', hover: 'hover:bg-blue-700', link: 'https://www.linkedin.com/in/venkatesulu-p-9a3251335/' },
-                ].map((social, index) => (
+                {socialMediaLink.map((social, index) => (
                   <a
                     key={index}
                     href={social.link}
@@ -54,7 +79,7 @@ const AboutSection = ({ isDarkMode, profileImage }) => {
                     Venkatesulu Pujari
                   </h3>
                   <p className={`text-lg ${isDarkMode ? 'text-blue-400' : 'text-blue-600'}`}>
-                    React Native Developer
+                    React Native ,React js,  Flutter Developer
                   </p>
                 </div>
                 <div className="mt-3 md:mt-0">
@@ -67,12 +92,7 @@ const AboutSection = ({ isDarkMode, profileImage }) => {
 
               {/* Key Points */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-                {[
-                  { icon: 'fas fa-briefcase', label: 'Experience', value: '2+ Years' },
-                  { icon: 'fas fa-map-marker-alt', label: 'Location', value: 'Bengaluru, India' },
-                  { icon: 'fas fa-graduation-cap', label: 'Degree', value: 'B.Tech. Civil' },
-                  { icon: 'fas fa-language', label: 'Languages', value: 'English, Hindi, Telugu' }
-                ].map((item, index) => (
+                {keyponits.map((item, index) => (
                   <div key={index} className={`flex items-center p-3 rounded-xl ${isDarkMode ? 'bg-gray-600/50' : 'bg-gray-50'}`}>
                     <div className={`w-10 h-10 rounded-lg flex items-center justify-center ${isDarkMode ? 'bg-gray-700' : 'bg-white'} shadow-sm`}>
                       <i className={`${item.icon} text-blue-500`}></i>
@@ -106,17 +126,7 @@ const AboutSection = ({ isDarkMode, profileImage }) => {
                   Core Technologies
                 </h4>
                 <div className="flex flex-wrap gap-2">
-                  {[
-                    { text: 'React js/Native', color: 'from-blue-500 to-blue-600' },
-                    { text: 'Flutter', color: 'from-blue-400 to-cyan-500' },
-                    { text: 'JavaScript', color: 'from-yellow-400 to-yellow-500' },
-                    { text: 'firebase', color: 'from-blue-600 to-indigo-600' },
-                    { text: 'Node.js', color: 'from-green-500 to-green-600' },
-                    { text: 'MongoDB / FireStore', color: 'from-green-600 to-teal-600' },
-                    { text: 'Redux', color: 'from-purple-500 to-purple-600' },
-                    { text: 'Bloc / Getx', color: 'from-green-500 to-green-600' },
-                    { text: 'REST APIs', color: 'from-gray-600 to-gray-700' }
-                  ].map((skill, index) => (
+                  {coreTechnologies.map((skill, index) => (
                     <span
                       key={index}
                       className={`px-3 py-1.5 rounded-full text-sm font-medium bg-gradient-to-r ${skill.color} text-white shadow-sm transform hover:scale-105 transition-all duration-300`}
@@ -127,28 +137,6 @@ const AboutSection = ({ isDarkMode, profileImage }) => {
                 </div>
               </div>
 
-              {/* Interview Highlights */}
-              <div className="mt-6 p-4 rounded-xl bg-gradient-to-r from-blue-500/10 to-purple-500/10 border border-blue-500/20">
-                <h4 className={`text-lg font-semibold mb-2 ${isDarkMode ? 'text-white' : 'text-gray-900'} flex items-center`}>
-                  <i className="fas fa-star mr-2 text-yellow-500"></i>
-                  Interview Highlights
-                </h4>
-                <ul className="space-y-2">
-                  <li className="flex items-start">
-                    <i className="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
-                    <span className={`${isDarkMode ? 'text-gray-300' : 'text-gray-700'}`}>
-                      <strong>Problem Solver:</strong> Implemented complex UI animations improving user engagement by 40%
-                    </span>
-                  </li>
-                  <li className="flex items-start">
-                    <i className="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
-                    <span className={`${isDarkMode ? 'text-gray-300' : 'text-gray-700'}`}>
-                      <strong>Performance Optimizer:</strong> Reduced app load time by 30% through code optimization
-                    </span>
-                  </li>
-
-                </ul>
-              </div>
             </div>
           </div>
         </div>
@@ -243,30 +231,6 @@ const AboutSection = ({ isDarkMode, profileImage }) => {
                       </ul>
                     </div>
                   </div>
-
-                  {/* Key Achievements */}
-                  <div className="mt-6 pt-6 border-t border-dashed border-gray-500/30">
-                    <h5 className={`text-lg font-semibold mb-3 ${isDarkMode ? 'text-gray-200' : 'text-gray-800'} flex items-center`}>
-                      <div className="w-8 h-8 rounded-lg bg-green-500/10 flex items-center justify-center mr-2">
-                        <i className="fas fa-trophy text-green-500"></i>
-                      </div>
-                      Key Achievements
-                    </h5>
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                      <div className={`p-4 rounded-xl ${isDarkMode ? 'bg-gray-600/50' : 'bg-gray-50'} text-center`}>
-                        <div className="text-3xl font-bold text-blue-500 mb-1">9+</div>
-                        <div className={`text-sm ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>Projects Completed</div>
-                      </div>
-                      <div className={`p-4 rounded-xl ${isDarkMode ? 'bg-gray-600/50' : 'bg-gray-50'} text-center`}>
-                        <div className="text-3xl font-bold text-purple-500 mb-1">60%</div>
-                        <div className={`text-sm ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>Performance Boost</div>
-                      </div>
-                      <div className={`p-4 rounded-xl ${isDarkMode ? 'bg-gray-600/50' : 'bg-gray-50'} text-center`}>
-                        <div className="text-3xl font-bold text-green-500 mb-1">3+</div>
-                        <div className={`text-sm ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>App Releases</div>
-                      </div>
-                    </div>
-                  </div>
                 </div>
               </div>
 
@@ -348,30 +312,6 @@ const AboutSection = ({ isDarkMode, profileImage }) => {
                         </p>
                       </div>
                     </div>
-                  </div>
-
-                  {/* Achievements */}
-                  <div className="mt-4">
-                    <h5 className={`text-lg font-semibold mb-3 ${isDarkMode ? 'text-gray-200' : 'text-gray-800'} flex items-center`}>
-                      <div className="w-8 h-8 rounded-lg bg-pink-500/10 flex items-center justify-center mr-2">
-                        <i className="fas fa-medal text-pink-500"></i>
-                      </div>
-                      Achievements
-                    </h5>
-                    <ul className="space-y-2">
-                      <li className="flex items-start">
-                        <i className="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
-                        <span className={`${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
-                          Participated in state-level technical symposium
-                        </span>
-                      </li>
-                      <li className="flex items-start">
-                        <i className="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
-                        <span className={`${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
-                          Member of college technical club
-                        </span>
-                      </li>
-                    </ul>
                   </div>
                 </div>
               </div>

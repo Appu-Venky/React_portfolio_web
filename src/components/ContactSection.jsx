@@ -1,5 +1,5 @@
 
-export default function ContactSection({isDarkMode,handleSubmit}) {
+export default function ContactSection({ isDarkMode, handleSubmit }) {
     return (
         <section id="contact" className={`py-20 ${isDarkMode ? 'bg-gray-900' : 'bg-white'}`}>
             <div className="max-w-7xl mx-auto px-4">
@@ -8,7 +8,9 @@ export default function ContactSection({isDarkMode,handleSubmit}) {
                     <div>
                         <h3 className={`text-2xl font-bold ${isDarkMode ? 'text-white' : 'text-gray-900'} mb-6`}>Get In Touch</h3>
                         <p className={`${isDarkMode ? 'text-gray-300' : 'text-gray-600'} mb-8`}>
-                            I'm currently available for freelance work and full-time positions. If you have a project that needs some creative coding or if you're looking for a developer to join your team, feel free to reach out.
+                            I have 2.5 years of experience in development and I am currently serving my notice period.
+                            I’m open to freelance projects as well as full-time opportunities.
+                            If you have a project that needs creative coding or are looking for a skilled developer to join your team, feel free to reach out.
                         </p>
                         <div className="space-y-4">
                             <div className="flex items-center">

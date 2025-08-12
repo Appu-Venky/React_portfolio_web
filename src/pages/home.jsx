@@ -1,7 +1,7 @@
-// The exported code uses Tailwind CSS. Install Tailwind CSS in your dev environment to ensure all styles work.
 import { faArrowUp } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import * as echarts from 'echarts';
+import emailjs from 'emailjs-com';
 import { useEffect, useRef, useState } from 'react';
 import profileImage from '../assets/profile.jpg';
 import AboutSection from '../components/AboutSection';
@@ -122,32 +122,35 @@ const Home = () => {
     };
 
 
-    const handleSubmit = () => {
-        // e.preventDefault();
-        // // Form submission logic would go here
-        // const form = e.target as HTMLFormElement;
-        // const formData = new FormData(form);
-        // // Example of form validation and submission
-        // const name = formData.get('name') as string;
-        // const email = formData.get('email') as string;
-        // const subject = formData.get('subject') as string;
-        // const message = formData.get('message') as string;
-        // if (name && email && subject && message) {
-        //     // Show success message
-        //     const successMessage = document.createElement('div');
-        //     successMessage.className = 'mt-4 p-3 bg-green-100 text-green-800 rounded-lg';
-        //     successMessage.textContent = 'Your message has been sent successfully!';
-        //     form.appendChild(successMessage);
-        //     // Reset form
-        //     form.reset();
-        //     // Remove success message after 5 seconds
-        //     setTimeout(() => {
-        //         form.removeChild(successMessage);
-        //     }, 5000);
-        // }
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        // Send form via EmailJS
+        emailjs.sendForm(
+            'service_24kpt3q',
+            'template_sx9b17u',
+            e.target,
+            'p7srGrPXXuQzfRPYw'
+        ).then(
+            (result) => {
+                console.log('SUCCESS!', result.text);
+                // Success message
+                const successMessage = document.createElement('div');
+                successMessage.className = 'mt-4 p-3 bg-green-100 text-green-800 rounded-lg';
+                successMessage.textContent = 'Your message has been sent successfully!';
+                e.target.appendChild(successMessage);
+                // Reset form
+                e.target.reset();
+                // Remove success message after 5 seconds
+                setTimeout(() => {
+                    e.target.removeChild(successMessage);
+                }, 5000);
+            },
+            (error) => {
+                console.error('FAILED...', error.text);
+                alert('Something went wrong. Please try again later.');
+            }
+        );
     };
-
-
 
 
     return (
@@ -178,7 +181,7 @@ const Home = () => {
                                     e.preventDefault();
                                     document.getElementById('home')?.scrollIntoView({ behavior: 'smooth' });
                                 }}
-                                className={`${isDarkMode ? 'text-gray-300 hover:text-white' : 'text-gray-600 hover:text-gray-900'} cursor-pointer transition-colors duration-300`}
+                                className={`${isDarkMode ? 'text-gray-300 hover:text-white' : 'text-gray-600 text-base font-semibold font-sans hover:text-gray-900'} cursor-pointer transition-colors duration-300`}
                             >Home</a>
                             <a
                                 href="#about"
@@ -186,7 +189,7 @@ const Home = () => {
                                     e.preventDefault();
                                     document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' });
                                 }}
-                                className={`${isDarkMode ? 'text-gray-300 hover:text-white' : 'text-gray-600 hover:text-gray-900'} cursor-pointer transition-colors duration-300`}
+                                className={`${isDarkMode ? 'text-gray-300 hover:text-white' : 'text-gray-600 text-base font-semibold font-sans hover:text-gray-900'} cursor-pointer transition-colors duration-300`}
                             >About</a>
                             <a
                                 href="#projects"
@@ -194,7 +197,7 @@ const Home = () => {
                                     e.preventDefault();
                                     document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' });
                                 }}
-                                className={`${isDarkMode ? 'text-gray-300 hover:text-white' : 'text-gray-600 hover:text-gray-900'} cursor-pointer transition-colors duration-300`}
+                                className={`${isDarkMode ? 'text-gray-300 hover:text-white' : 'text-gray-600 text-base font-semibold font-sans hover:text-gray-900'} cursor-pointer transition-colors duration-300`}
                             >Projects</a>
                             <a
                                 href="#skills"
@@ -202,7 +205,7 @@ const Home = () => {
                                     e.preventDefault();
                                     document.getElementById('skills')?.scrollIntoView({ behavior: 'smooth' });
                                 }}
-                                className={`${isDarkMode ? 'text-gray-300 hover:text-white' : 'text-gray-600 hover:text-gray-900'} cursor-pointer transition-colors duration-300`}
+                                className={`${isDarkMode ? 'text-gray-300 hover:text-white' : 'text-gray-600 text-base font-semibold font-sans hover:text-gray-900'} cursor-pointer transition-colors duration-300`}
                             >Skills</a>
                             <a
                                 href="#contact"
@@ -210,7 +213,7 @@ const Home = () => {
                                     e.preventDefault();
                                     document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
                                 }}
-                                className={`${isDarkMode ? 'text-gray-300 hover:text-white' : 'text-gray-600 hover:text-gray-900'} cursor-pointer transition-colors duration-300`}
+                                className={`${isDarkMode ? 'text-gray-300 hover:text-white' : 'text-gray-600 text-base font-semibold font-sans hover:text-gray-900'} cursor-pointer transition-colors duration-300`}
                             >Contact</a>
                             <button
                                 onClick={toggleDarkMode}
@@ -233,6 +236,12 @@ const Home = () => {
 
 
             </nav>
+
+
+
+
+
+
 
 
             {/* Mobile Navigation */}
